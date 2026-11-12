@@ -13,7 +13,7 @@ For details, please see http://ics-software-engineering.github.io/nextjs-applica
 
 3. **Install dependencies:**
 	```bash
-	npm install
+	pnpm i
 	```
 
 4. **Create your .env file:**
@@ -21,22 +21,22 @@ For details, please see http://ics-software-engineering.github.io/nextjs-applica
 
 5. **Run database migrations:**
 	```bash
-	npx prisma migrate dev
+	pnpx prisma migrate dev
 	```
 
 6. **Generate Prisma client:**
 	```bash
-	npx prisma generate
+	pnpx prisma generate
 	```
 
 7. **Seed the database:**
 	```bash
-	npm run seed
+	pnpm run seed
 	```
 
 8. **Start the development server:**
 	```bash
-	npm run dev
+	pnpm run dev
 	```
 
 The app will be available at [http://localhost:3000](http://localhost:3000).
