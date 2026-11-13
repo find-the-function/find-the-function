@@ -21,12 +21,12 @@ For details, please see <https://ics-software-engineering.github.io/nextjs-appli
 
 5. **Run database migrations:**
 	```bash
-	pnpm exec prisma migrate dev
+	pnpm prisma migrate dev
 	```
 
 6. **Generate Prisma client:**
 	```bash
-	pnpm exec prisma generate
+	pnpm prisma generate
 	```
 
 7. **Seed the database:**
