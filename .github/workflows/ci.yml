@@ -43,13 +43,13 @@ jobs:
       - name: Install Playwright Browsers
         run: pnpx playwright install --with-deps
       - name: Generate Prisma Client
-        run: pnpx prisma generate
+        run: pnpm exec prisma generate
       - name: Run database migrations
-        run: pnpx prisma migrate deploy
+        run: pnpm exec prisma migrate deploy
       - name: Seed database
         run: pnpm run seed
       - name: Verify database connection
-        run: pnpx prisma db execute --stdin <<< "SELECT COUNT(*) FROM \"User\";"
+        run: pnpm exec prisma db execute --stdin <<< "SELECT COUNT(*) FROM \"User\";"
       - name: Run ESLint
         run: pnpm run lint
       - name: Build Next.js application
