@@ -1,5 +1,6 @@
-[![ci-nextjs-application-template](https://github.com/ics-software-engineering/nextjs-application-template/actions/workflows/ci.yml/badge.svg)](https://github.com/ics-software-engineering/nextjs-application-template/actions/workflows/ci.yml)
+# Find the Function
 
+[![ci-find-the-function](https://github.com/find-the-function/find-the-function/actions/workflows/ci.yml/badge.svg)](https://github.com/find-the-function/find-the-function/actions/workflows/ci.yml)
 For details, please see http://ics-software-engineering.github.io/nextjs-application-template/.
 
 ## Installation
