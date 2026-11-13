@@ -2,7 +2,7 @@
 
 [![ci-find-the-function](https://github.com/find-the-function/find-the-function/actions/workflows/ci.yml/badge.svg)](https://github.com/find-the-function/find-the-function/actions/workflows/ci.yml)
 
-For details, please see http://ics-software-engineering.github.io/nextjs-application-template/.
+For details, please see <https://ics-software-engineering.github.io/nextjs-application-template/>.
 
 ## Installation
 
@@ -15,7 +15,7 @@ For details, please see http://ics-software-engineering.github.io/nextjs-applica
 
 3. **Install dependencies:**
 	```bash
-	npm install
+	pnpm i
 	```
 
 4. **Create your .env file:**
@@ -23,22 +23,22 @@ For details, please see http://ics-software-engineering.github.io/nextjs-applica
 
 5. **Run database migrations:**
 	```bash
-	npx prisma migrate dev
+	pnpm prisma migrate dev
 	```
 
 6. **Generate Prisma client:**
 	```bash
-	npx prisma generate
+	pnpm prisma generate
 	```
 
 7. **Seed the database:**
 	```bash
-	npm run seed
+	pnpm run seed
 	```
 
 8. **Start the development server:**
 	```bash
-	npm run dev
+	pnpm run dev
 	```
 
 The app will be available at [http://localhost:3000](http://localhost:3000).

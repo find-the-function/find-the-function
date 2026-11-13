@@ -36,27 +36,29 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: lts/*
+      - name: Enable Corepack (pnpm)
+        run: corepack enable
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: pnpx playwright install --with-deps
       - name: Generate Prisma Client
-        run: npx prisma generate
+        run: pnpm exec prisma generate
       - name: Run database migrations
-        run: npx prisma migrate deploy
+        run: pnpm exec prisma migrate deploy
       - name: Seed database
-        run: npm run seed
+        run: pnpm run seed
       - name: Verify database connection
-        run: npx prisma db execute --stdin <<< "SELECT COUNT(*) FROM \"User\";"
+        run: pnpm exec prisma db execute --stdin <<< "SELECT COUNT(*) FROM \"User\";"
       - name: Run ESLint
-        run: npm run lint
+        run: pnpm run lint
       - name: Build Next.js application
-        run: npm run build
+        run: pnpm run build
       - name: Clean up session files
         run: rm -rf tests/playwright-auth-sessions/*
       # Playwright should start the server automatically using webServer config
       - name: Run Playwright tests
-        run: npm run playwright
+        run: pnpm run playwright
       - name: Upload Playwright report
         uses: actions/upload-artifact@v7.0.2
         if: always() && env.ACT != 'true'
