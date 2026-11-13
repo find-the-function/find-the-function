@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seed": "pnpx tsx src/seed.ts",
+    "seed": "tsx src/seed.ts",
     "playwright": "playwright test"
   },
   "packageManager": "pnpm@12.18.0",
