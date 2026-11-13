@@ -1,6 +1,6 @@
 [![ci-nextjs-application-template](https://github.com/ics-software-engineering/nextjs-application-template/actions/workflows/ci.yml/badge.svg)](https://github.com/ics-software-engineering/nextjs-application-template/actions/workflows/ci.yml)
 
-For details, please see http://ics-software-engineering.github.io/nextjs-application-template/.
+For details, please see <https://ics-software-engineering.github.io/nextjs-application-template/>.
 
 ## Installation
 
@@ -21,12 +21,12 @@ For details, please see http://ics-software-engineering.github.io/nextjs-applica
 
 5. **Run database migrations:**
 	```bash
-	pnpx prisma migrate dev
+	pnpm exec prisma migrate dev
 	```
 
 6. **Generate Prisma client:**
 	```bash
-	pnpx prisma generate
+	pnpm exec prisma generate
 	```
 
 7. **Seed the database:**
