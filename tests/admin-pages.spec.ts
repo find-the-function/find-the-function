@@ -2,7 +2,7 @@ import { test, expect } from './auth-utils';
 
 test('test access to admin page', async ({ getUserPage }) => {
   test.slow();
-  // Call the getUserPage fixture with admin signin info to get authenticated session for admin
+  // Call the getUserPage fixture with admin sign-in info to get authenticated session for admin
   const adminPage = await getUserPage('admin@foo.com', 'changeme');
 
   // Navigate to the home page and wait for post-login indicator
