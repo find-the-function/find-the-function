@@ -2,7 +2,7 @@ import { test, expect } from './auth-utils';
 
 test('can authenticate a specific user', async ({ getUserPage }) => {
   test.slow();
-  // Call the getUserPage fixture with users signin info to get authenticated session for user
+  // Call the getUserPage fixture with user's sign-in info to get authenticated session for user
   const customUserPage = await getUserPage('john@foo.com', 'changeme');
 
   // Navigate to the home page and wait for post-login indicator

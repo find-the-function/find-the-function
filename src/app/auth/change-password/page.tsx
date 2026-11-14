@@ -10,7 +10,7 @@ import { changePassword } from '@/lib/dbActions';
 import LoadingSpinner from '@/components/LoadingSpinner';
 
 type ChangePasswordForm = {
-  oldpassword: string;
+  oldPassword: string;
   password: string;
   confirmPassword: string;
   // acceptTerms: boolean;
@@ -21,7 +21,7 @@ const ChangePassword = () => {
   const { data: session, status } = useSession();
   const email = session?.user?.email || '';
   const validationSchema = Yup.object().shape({
-    oldpassword: Yup.string().required('Password is required'),
+    oldPassword: Yup.string().required('Password is required'),
     password: Yup.string()
       .required('Password is required')
       .min(6, 'Password must be at least 6 characters')
@@ -61,13 +61,13 @@ const ChangePassword = () => {
               <Card.Body>
                 <Form onSubmit={handleSubmit(onSubmit)}>
                   <Form.Group className="form-group">
-                    <Form.Label>Old Passord</Form.Label>
+                    <Form.Label>Old Password</Form.Label>
                     <input
                       type="password"
-                      {...register('oldpassword')}
-                      className={`form-control ${errors.oldpassword ? 'is-invalid' : ''}`}
+                      {...register('oldPassword')}
+                      className={`form-control ${errors.oldPassword ? 'is-invalid' : ''}`}
                     />
-                    <div className="invalid-feedback">{errors.oldpassword?.message}</div>
+                    <div className="invalid-feedback">{errors.oldPassword?.message}</div>
                   </Form.Group>
 
                   <Form.Group className="form-group">

@@ -9,11 +9,12 @@ import { redirect } from 'next/navigation';
 import { addStuff } from '@/lib/dbActions';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { AddStuffSchema } from '@/lib/validationSchemas';
+import React from 'react';
 
 const onSubmit = async (data: { name: string; quantity: number; owner: string; condition: string }) => {
   // console.log(`onSubmit data: ${JSON.stringify(data, null, 2)}`);
   await addStuff(data);
-  swal('Success', 'Your item has been added', 'success', {
+  await swal('Success', 'Your item has been added', 'success', {
     timer: 2000,
   });
 };

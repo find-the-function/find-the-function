@@ -8,7 +8,7 @@ import { prisma } from './prisma';
 
 /**
  * Adds a new stuff to the database.
- * @param stuff, an object with the following properties: name, quantity, owner, condition.
+ * @param stuff an object with the following properties: name, quantity, owner, condition.
  */
 export async function addStuff(stuff: { name: string; quantity: number; owner: string; condition: string }) {
   // console.log(`addStuff data: ${JSON.stringify(stuff, null, 2)}`);
@@ -17,7 +17,7 @@ export async function addStuff(stuff: { name: string; quantity: number; owner: s
     condition = 'poor';
   } else if (stuff.condition === 'excellent') {
     condition = 'excellent';
-  } else {
+  } else if (stuff.condition === 'fair') {
     condition = 'fair';
   }
   await prisma.stuff.create({
@@ -34,7 +34,7 @@ export async function addStuff(stuff: { name: string; quantity: number; owner: s
 
 /**
  * Edits an existing stuff in the database.
- * @param stuff, an object with the following properties: id, name, quantity, owner, condition.
+ * @param stuff an object with the following properties: id, name, quantity, owner, condition.
  */
 export async function editStuff(stuff: Stuff) {
   // console.log(`editStuff data: ${JSON.stringify(stuff, null, 2)}`);
@@ -53,7 +53,7 @@ export async function editStuff(stuff: Stuff) {
 
 /**
  * Deletes an existing stuff from the database.
- * @param id, the id of the stuff to delete.
+ * @param id the id of the stuff to delete.
  */
 export async function deleteStuff(id: number) {
   // console.log(`deleteStuff id: ${id}`);
@@ -66,7 +66,7 @@ export async function deleteStuff(id: number) {
 
 /**
  * Creates a new user in the database.
- * @param credentials, an object with the following properties: email, password.
+ * @param credentials an object with the following properties: email, password.
  */
 export async function createUser(credentials: { email: string; password: string }) {
   // console.log(`createUser data: ${JSON.stringify(credentials, null, 2)}`);
@@ -81,7 +81,7 @@ export async function createUser(credentials: { email: string; password: string 
 
 /**
  * Changes the password of an existing user in the database.
- * @param credentials, an object with the following properties: email, password.
+ * @param credentials an object with the following properties: email, password.
  */
 export async function changePassword(credentials: { email: string; password: string }) {
   // console.log(`changePassword data: ${JSON.stringify(credentials, null, 2)}`);

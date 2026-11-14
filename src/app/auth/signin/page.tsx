@@ -2,8 +2,9 @@
 
 import { signIn } from 'next-auth/react'; // v5 compatible
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
+import React from 'react';
 
-/** The sign in page. */
+/** The sign-in page. */
 const SignIn = () => {
   const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,7 +39,7 @@ const SignIn = () => {
                     <input name="password" type="password" className="form-control" />
                   </Form.Group>
                   <Button type="submit" className="mt-3">
-                    Signin
+                    Sign in
                   </Button>
                 </Form>
               </Card.Body>
