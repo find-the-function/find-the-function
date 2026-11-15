@@ -1,4 +1,5 @@
 import { Stuff } from '@prisma/client';
+import Link from 'next/link';
 
 /* Renders a single row in the List Stuff table. See list/page.tsx. */
 const StuffItemAdmin = ({ name, quantity, condition, owner, id }: Stuff) => (
@@ -8,7 +9,7 @@ const StuffItemAdmin = ({ name, quantity, condition, owner, id }: Stuff) => (
     <td>{condition}</td>
     <td>{owner}</td>
     <td>
-      <a href={`/edit/${id}`}>Edit</a>
+      <Link href={`/edit/${id}`}>Edit</Link>
     </td>
   </tr>
 );
