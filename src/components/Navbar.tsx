@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { BoxArrowRight, Lock, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 import React from 'react';
+import Link from 'next/link';
 
 const NavBar: React.FC = () => {
   const { data: session, status } = useSession();
@@ -21,16 +22,16 @@ const NavBar: React.FC = () => {
           <Nav className="me-auto justify-content-start">
             {currentUser && (
               <>
-                <Nav.Link id="add-stuff-nav" href="/add" active={pathName === '/add'}>
+                <Nav.Link as={Link} id="add-stuff-nav" href="/add" active={pathName === '/add'}>
                   Add Stuff
                 </Nav.Link>
-                <Nav.Link id="list-stuff-nav" href="/list" active={pathName === '/list'}>
+                <Nav.Link as={Link} id="list-stuff-nav" href="/list" active={pathName === '/list'}>
                   List Stuff
                 </Nav.Link>
               </>
             )}
             {currentUser && role === 'ADMIN' && (
-              <Nav.Link id="admin-stuff-nav" href="/admin" active={pathName === '/admin'}>
+              <Nav.Link as={Link} id="admin-stuff-nav" href="/admin" active={pathName === '/admin'}>
                 Admin
               </Nav.Link>
             )}
