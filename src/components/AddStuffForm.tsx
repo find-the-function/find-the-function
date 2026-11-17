@@ -69,7 +69,7 @@ const AddStuffForm: React.FC = () => {
                 <Form.Group>
                   <Form.Label>Condition</Form.Label>
                   <select {...register('condition')} className={`form-control ${errors.condition ? 'is-invalid' : ''}`}>
-                    <option value="excellent">Excellent</option>
+                    <option value="excellent">Superior</option>
                     <option value="good">Good</option>
                     <option value="fair">Fair</option>
                     <option value="poor">Poor</option>
