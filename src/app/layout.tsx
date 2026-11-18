@@ -30,7 +30,8 @@ export default function RootLayout({
 }>) {
   const classString = `${geistSans.variable} ${geistMono.variable} wrapper`;
   return (
-    <html lang="en">
+    // https://nextjs.org/docs/messages/missing-data-scroll-behavior
+    <html lang="en" data-scroll-behavior="smooth">
       <body className={classString}>
        <Providers>
           <NavBar />
