@@ -1,6 +1,7 @@
 {
-  "name": "nextjs-application-template-s26",
+  "name": "find-the-function",
   "version": "0.1.0",
+  "homepage": "https://find-the-function.github.io",
   "private": true,
   "type": "module",
   "scripts": {
