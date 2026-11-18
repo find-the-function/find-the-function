@@ -12,6 +12,9 @@
     "playwright": "playwright test"
   },
   "packageManager": "pnpm@12.18.0",
+  "engines": {
+    "node": ">=26.0.0"
+  },
   "dependencies": {
     "@hookform/resolvers": "^5.9.2",
     "@prisma/adapter-pg": "^7.10.1",
@@ -35,7 +38,7 @@
   "devDependencies": {
     "@playwright/test": "^1.65.0",
     "@types/bcrypt": "^6.0.0",
-    "@types/node": "^20.19.43",
+    "@types/node": "^26.6.6",
     "@types/pg": "^8.23.1",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
