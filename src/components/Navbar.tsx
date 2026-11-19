@@ -6,6 +6,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { BoxArrowRight, Lock, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 import React from 'react';
 import Link from 'next/link';
+import './search.css';
 
 const NavBar: React.FC = () => {
   const { data: session, status } = useSession();
@@ -16,18 +17,22 @@ const NavBar: React.FC = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand as={Link} href="/">Next.js Application Template</Navbar.Brand>
+        <Navbar.Brand as={Link} href="/">Find the Function</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
             {currentUser && (
               <>
-                <Nav.Link as={Link} id="add-stuff-nav" href="/add" active={pathName === '/add'}>
-                  Add Stuff
+                <Nav.Link as={Link} id="interests-nav" href="/interests" active={pathName === '/interests'}>
+                  Interests
                 </Nav.Link>
-                <Nav.Link as={Link} id="list-stuff-nav" href="/list" active={pathName === '/list'}>
-                  List Stuff
-                </Nav.Link>
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"></link>
+                  <div className="row justify-content-center">
+                    <div className="search-container">
+                      <input type="text" className="form-control search-input" placeholder="Search..." />
+                      <i className="fas fa-search search-icon"></i>
+                    </div>
+                  </div>
               </>
             )}
             {currentUser && role === 'ADMIN' && (
@@ -39,13 +44,17 @@ const NavBar: React.FC = () => {
           <Nav>
             {session ? (
               <NavDropdown id="login-dropdown" title={currentUser}>
-                <NavDropdown.Item as={Link} id="login-dropdown-sign-out" href="/api/auth/signout">
-                  <BoxArrowRight />
-                  Sign Out
+                <NavDropdown.Item as={Link} id="login-dropdown-profile" href="/profile">
+                  <PersonFill />
+                  Profile
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} id="login-dropdown-change-password" href="/auth/change-password">
                   <Lock />
                   Change Password
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} id="login-dropdown-sign-out" href="/api/auth/signout">
+                  <BoxArrowRight />
+                  Sign Out
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
