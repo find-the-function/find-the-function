@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
   return (
     <Navbar expand="lg" style={{ background: 'linear-gradient(to right, #22a63a, #42bfac)'}}>
       <Container>
-        <Navbar.Brand as={Link} href="/"><Image src="/Ftflogo.png" alt="Find the Function" width={180} height={60}></Image></Navbar.Brand>
+        <Navbar.Brand as={Link} href="/"><Image src="/Ftflogo.png" alt="Find the Function" height={80}></Image></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
