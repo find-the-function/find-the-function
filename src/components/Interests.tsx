@@ -33,8 +33,15 @@ function Interests() {
                 role="button"
                 onClick={() => toggle(name)}
                 className={`h-100 text-center p-4 shadow-sm ${
-                  active ? 'bg-light border-info border-3' : 'bg-info'
+                  active ? 'border-info border-3' : ''
                 }`}
+                style={{
+                  backgroundColor: active
+                    ? 'rgba(255, 255, 255, 0.65)'
+                    : 'rgba(255, 255, 255, 0.3)',
+                  borderRadius: '24px',
+                  backdropFilter: 'blur(8px)',
+                }}
               >
                 <div style={{ fontSize: '4rem' }}>{icon}</div>
                 <h4 className="mt-3">{name}</h4>
@@ -48,7 +55,12 @@ function Interests() {
       {/* Your picks panel */}
       <Row className="justify-content-center">
         <Col xs={12} md={8} lg={6}>
-          <Card className="shadow-sm text-center p-4">
+          <Card
+            className="shadow-sm text-center p-4"
+            style={{backgroundColor: 'rgba(255, 255, 255, 0.3)',
+            borderRadius: '24px',
+            backdropFilter: 'blur(8px)'}}
+          >
             <h3 className="mb-3">Your picks</h3>
 
             {selected.length === 0 ? (
