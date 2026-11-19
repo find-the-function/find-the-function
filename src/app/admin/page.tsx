@@ -22,6 +22,34 @@ const AdminPage = async () => {
       postedBy: "john@foo.com",
       eventId: "341234124",
     },
+    {
+      title: "Career Fair",
+      date: "November 30, 2026",
+      location: "Campus Center Ballroom",
+      postedBy: "john@foo.com",
+      eventId: "3412343124",
+    },
+    {
+      title: "Career Fair",
+      date: "November 30, 2026",
+      location: "Campus Center Ballroom",
+      postedBy: "john@foo.com",
+      eventId: "34123234124",
+    },
+    {
+      title: "Career Fair",
+      date: "November 30, 2026",
+      location: "Campus Center Ballroom",
+      postedBy: "john@foo.com",
+      eventId: "341111234124",
+    },
+    {
+      title: "Career Fair",
+      date: "November 30, 2026",
+      location: "Campus Center Ballroom",
+      postedBy: "john@foo.com",
+      eventId: "3412341245323",
+    },
   ];
   return (
     <main>
