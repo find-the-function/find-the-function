@@ -3,7 +3,7 @@
 
 // /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
  const Footer = () => (
-  <footer className="mt-auto py-3 bg-light">
+  <footer>
     </footer>
  );
 //  <footer className="mt-auto py-3 bg-light">

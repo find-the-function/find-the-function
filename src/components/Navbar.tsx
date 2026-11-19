@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react'; // v5 compatible
 import { usePathname } from 'next/navigation';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Image } from 'react-bootstrap';
 import { BoxArrowRight, Lock, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 import React from 'react';
 import Link from 'next/link';
@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
   return (
     <Navbar expand="lg" style={{ background: 'linear-gradient(to right, #22a63a, #42bfac)'}}>
       <Container>
-        <Navbar.Brand as={Link} href="/">Find the Function</Navbar.Brand>
+        <Navbar.Brand as={Link} href="/"><Image src="/Ftflogo.png" alt="Find the Function" width={180} height={60}></Image></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
@@ -34,7 +34,6 @@ const NavBar: React.FC = () => {
             )}
             {currentUser && role === 'ADMIN' && (
               <Nav.Link as={Link} id="admin-stuff-nav" href="/admin" active={pathName === '/admin'}>
-                Admin
               </Nav.Link>
             )}
           </Nav>
