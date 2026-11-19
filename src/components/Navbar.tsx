@@ -1,16 +1,17 @@
 'use client';
 
 import { useSession } from 'next-auth/react'; // v5 compatible
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 import { Container, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { BoxArrowRight, Lock, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 
 const NavBar: React.FC = () => {
   const { data: session, status } = useSession();
-  const pathName = usePathname();
+  // const pathName = usePathname();
   if (status === 'loading') return null;
   const currentUser = session?.user?.email;
-  const role = session?.user?.role;
+  //todo: add admin link if user is admin
+  // const role = session?.user?.role;
   return (
     <Navbar bg="light" expand="lg">
       <Container>

@@ -1,4 +1,4 @@
-import { Button, Col, Container, NavLink, Row, Stack } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import './style.css';
 
 /** The Home page. */
@@ -12,7 +12,7 @@ const Home = () => (
         </h4>
         <h4 className="pb-0" style={{ fontSize: '2rem' }}>Please sign in to get started:</h4>
         <Button href="/auth/signin" className="align-middle text-center py-2"><h4>Sign In</h4></Button>
-        <h4 className="pt-3" style={{ fontSize: '2rem' }}>Don't have an account? Register here:</h4>
+        <h4 className="pt-3" style={{ fontSize: '2rem' }}>Don&apos;t have an account? Register here:</h4>
         <Button href="/auth/signup" className="align-middle text-center py-2"><h4>Sign Up</h4></Button>
       </div>
     </Container>
