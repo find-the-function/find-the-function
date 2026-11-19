@@ -1,6 +1,6 @@
 html,
 body {
-  --bs-light-rgb: 236, 236, 236;
+  --bs-light-rgb: 67, 191, 170;
   box-sizing: border-box;
   height: 100%;
   padding: 0;
@@ -11,4 +11,34 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+.navbar {
+  background: linear-gradient(
+    to right,
+    #23a63b 0%,
+    #23a63b 50%,
+    #43bfaa 70%,
+    #43bfaa 100%
+  );
+  color: white;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.rounded-button .dropdown-toggle {
+  padding: 8px 15px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.08);
+  color: white;
+  font-family: 'Trebuchet MS'
+}
+.rounded-button .dropdown-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.24);
+  color: cyan;
+}
+.navbar-brand {
+  color: #ffffff;
+}
+footer {
+  color: white;
+  font-family: 'Trebuchet MS'
 }
