@@ -15,7 +15,7 @@ const NavBar: React.FC = () => {
   const currentUser = session?.user?.email;
   const role = session?.user?.role;
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" style={{ background: 'linear-gradient(to right, #22a63a, #42bfac)'}}>
       <Container>
         <Navbar.Brand as={Link} href="/">Find the Function</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -23,9 +23,6 @@ const NavBar: React.FC = () => {
           <Nav className="me-auto justify-content-start">
             {currentUser && (
               <>
-                <Nav.Link as={Link} id="interests-nav" href="/interests" active={pathName === '/interests'}>
-                  Interests
-                </Nav.Link>
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"></link>
                   <div className="row justify-content-center">
                     <div className="search-container">
