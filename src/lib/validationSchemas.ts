@@ -14,3 +14,11 @@ export const EditStuffSchema = Yup.object({
   condition: Yup.string().oneOf(['excellent', 'good', 'fair', 'poor']).required(),
   owner: Yup.string().required(),
 });
+
+export interface mockupEvent {
+  title: string;
+  date: string;
+  location: string;
+  postedBy: string;
+  eventId: string;
+}
