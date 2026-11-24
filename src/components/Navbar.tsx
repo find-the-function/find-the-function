@@ -3,7 +3,7 @@
 import { useSession } from 'next-auth/react'; // v5 compatible
 // import { usePathname } from 'next/navigation';
 import { Container, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { BoxArrowRight, Lock, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
+import { BoxArrowRight, Briefcase, Lock, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 import Link from 'next/link';
 
 const NavBar: React.FC = () => {
@@ -12,7 +12,7 @@ const NavBar: React.FC = () => {
   if (status === 'loading') return null;
   const currentUser = session?.user?.email;
   //todo: add admin link if user is admin
-  // const role = session?.user?.role;
+  const role = session?.user?.role;
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -24,6 +24,11 @@ const NavBar: React.FC = () => {
           <Nav className="ms-auto">
             {session ? (
               <NavDropdown id="login-dropdown" title={currentUser}>
+                { (role === 'ADMIN') && (<NavDropdown.Item as={Link} href="/admin">
+                  <Briefcase />
+                  {' '}
+                  Admin Dashboard
+                </NavDropdown.Item>) }
                 <NavDropdown.Item as={Link} id="login-dropdown-sign-out" href="/api/auth/signout">
                   <BoxArrowRight />
                   {' '}
