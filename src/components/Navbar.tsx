@@ -26,10 +26,12 @@ const NavBar: React.FC = () => {
               <NavDropdown id="login-dropdown" title={currentUser}>
                 <NavDropdown.Item as={Link} id="login-dropdown-sign-out" href="/api/auth/signout">
                   <BoxArrowRight />
+                  {' '}
                   Sign Out
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} id="login-dropdown-change-password" href="/auth/change-password">
                   <Lock />
+                  {' '}
                   Change Password
                 </NavDropdown.Item>
               </NavDropdown>
