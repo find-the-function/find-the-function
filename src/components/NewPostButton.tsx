@@ -7,7 +7,7 @@ export default function NewPostButton() {
   const router = useRouter();
   return (
     <Button
-      className="position-absolute bottom-0 end-0 m-4"
+      className="position-fixed bottom-0 end-0 m-4"
       onClick={() => {router.push("/add")}}
     >
       New post
