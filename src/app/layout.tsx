@@ -33,7 +33,7 @@ export default function RootLayout({
     // https://nextjs.org/docs/messages/missing-data-scroll-behavior
     <html lang="en" data-scroll-behavior="smooth">
       <body className={classString}>
-       <Providers>
+        <Providers>
           <NavBar />
           {children}
           <Footer />
