@@ -12,7 +12,7 @@
     "seed": "tsx src/seed.ts",
     "playwright": "playwright test"
   },
-  "packageManager": "pnpm@12.18.0",
+  "packageManager": "pnpm@12.23.0",
   "engines": {
     "node": "^26.0.0"
   },
