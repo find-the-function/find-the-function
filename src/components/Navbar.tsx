@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'; // v5 compatible
 import { Container, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { BoxArrowRight, Briefcase, Lock, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 import Link from 'next/link';
+import React from 'react';
 
 const NavBar: React.FC = () => {
   const { data: session, status } = useSession();

@@ -20,15 +20,15 @@ body {
     #43bfaa 100%
   );
   color: white;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .rounded-button .dropdown-toggle {
   padding: 8px 15px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.08);
   color: white;
-  font-family: 'Trebuchet MS'
+  font-family: 'Trebuchet MS', sans-serif
 }
 .rounded-button .dropdown-toggle:hover {
   background-color: rgba(0, 0, 0, 0.24);
@@ -39,5 +39,5 @@ body {
 }
 footer {
   color: white;
-  font-family: 'Trebuchet MS'
+  font-family: 'Trebuchet MS', sans-serif
 }
